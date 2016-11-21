@@ -27,8 +27,7 @@ namespace Microsoft.AspNetCore.Mvc.DataAnnotations.Internal
             var adapter = new CompareAttributeAdapter(attribute, stringLocalizer: null);
 
             // Mono issue - https://github.com/aspnet/External/issues/19
-            var expectedMessage = PlatformNormalizer.NormalizeContent(
-                    "'MyPropertyDisplayName' and 'OtherPropertyDisplayName' do not match.");
+            var expectedMessage = "'MyPropertyDisplayName' and 'OtherPropertyDisplayName' do not match.";
 
             var actionContext = new ActionContext();
             var context = new ClientModelValidationContext(
@@ -107,7 +106,7 @@ namespace Microsoft.AspNetCore.Mvc.DataAnnotations.Internal
             var adapter = new CompareAttributeAdapter(attribute, stringLocalizer: null);
 
             // Mono issue - https://github.com/aspnet/External/issues/19
-            var expectedMessage = PlatformNormalizer.NormalizeContent("'MyProperty' and 'OtherProperty' do not match.");
+            var expectedMessage = "'MyProperty' and 'OtherProperty' do not match.";
 
             var actionContext = new ActionContext();
             var context = new ClientModelValidationContext(
